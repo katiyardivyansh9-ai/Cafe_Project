@@ -3,37 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-  <title>महफ़िल Cafe | Artisanal Kitchen, Shakes & Roastery</title>
+  <title>महफ़िल Cafe | Royal Blue Artisanal Kitchen, Shakes & Roastery</title>
   <style>
     :root {
-      --bg-main: #fcf9f4;
-      --bg-sec: #f3eadf;
+      --bg-main: #f4f7fc;
+      --bg-sec: #e6eef9;
       --card-bg: #ffffff;
-      --espresso: #28150d;
-      --roast: #462517;
-      --caramel: #8c5332;
-      --gold: #c8963e;
-      --gold-light: #f0d7a7;
-      --ink: #24130c;
-      --muted: #6e5548;
-      --border: #e4d4c0;
-      --input-bg: #fffdf9;
-      --bill-bg: #f4ece1;
+      --royal-deep: #0b1d45;
+      --royal: #163a8a;
+      --royal-bright: #2557c4;
+      --gold: #d4a84f;
+      --gold-light: #f6e2b3;
+      --ink: #0f1c38;
+      --muted: #4b5d82;
+      --border: #cbd8ee;
+      --input-bg: #fbfdff;
+      --bill-bg: #ebf1fa;
       --success: #166534;
       --danger: #b91c1c;
-      --shadow: 0 18px 42px rgba(40, 21, 13, 0.10);
+      --shadow: 0 18px 42px rgba(11, 29, 69, 0.11);
     }
 
     body.night-mode {
-      --bg-main: #140b07;
-      --bg-sec: #1f110b;
-      --card-bg: #26150e;
-      --ink: #f7ede0;
-      --muted: #cbb7a2;
-      --border: #4a2d1d;
-      --input-bg: #1b0e08;
-      --bill-bg: #1e100a;
-      --shadow: 0 20px 48px rgba(0, 0, 0, 0.48);
+      --bg-main: #071126;
+      --bg-sec: #0d1c3d;
+      --card-bg: #11234a;
+      --ink: #edf3ff;
+      --muted: #a7bce6;
+      --border: #24407a;
+      --input-bg: #0a1630;
+      --bill-bg: #0e1e40;
+      --shadow: 0 20px 48px rgba(0, 0, 0, 0.52);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, sans-serif; }
@@ -47,54 +47,54 @@
       transition: background 0.45s ease, color 0.45s ease;
     }
 
-    /* AMBIENT FLOATING ORBS */
+    /* AMBIENT ROYAL BLUE & GOLD ORBS */
     .ambient-orb {
-      position: fixed; border-radius: 50%; filter: blur(95px); z-index: -1; opacity: 0.32; pointer-events: none;
+      position: fixed; border-radius: 50%; filter: blur(95px); z-index: -1; opacity: 0.28; pointer-events: none;
       animation: orbDrift 14s ease-in-out infinite alternate;
     }
-    .ao-1 { width: 420px; height: 420px; background: #d9a34a; top: -110px; right: -80px; }
-    .ao-2 { width: 360px; height: 360px; background: #9c623c; bottom: 4%; left: -90px; animation-delay: -6s; }
+    .ao-1 { width: 420px; height: 420px; background: #2557c4; top: -110px; right: -80px; }
+    .ao-2 { width: 360px; height: 360px; background: #d4a84f; bottom: 4%; left: -90px; animation-delay: -6s; }
     @keyframes orbDrift {
       0% { transform: translate(0, 0) scale(1); }
       100% { transform: translate(-25px, 35px) scale(1.14); }
     }
 
-    /* FLOATING GLASS NAVBAR WITH LIVE CLOCK & THEME INDICATOR */
+    /* FLOATING ROYAL GLASS NAVBAR WITH LIVE CLOCK & THEME INDICATOR */
     .nav-shell { position: fixed; top: 10px; left: 0; right: 0; z-index: 80; padding: 0 12px; }
     header {
       max-width: 1240px; margin: 0 auto;
-      background: rgba(34, 17, 10, 0.93);
+      background: rgba(11, 29, 69, 0.94);
       backdrop-filter: blur(18px);
-      border: 1.5px solid rgba(200, 150, 62, 0.48);
+      border: 1.5px solid rgba(212, 168, 79, 0.5);
       border-radius: 999px;
       padding: 8px 18px;
-      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.34);
+      box-shadow: 0 14px 36px rgba(7, 17, 38, 0.36);
     }
     .mast { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
-    .brand { display: flex; align-items: center; gap: 10px; cursor: pointer; color: #fffaf2; font-weight: 800; font-size: 1.18rem; }
+    .brand { display: flex; align-items: center; gap: 10px; cursor: pointer; color: #f6f9ff; font-weight: 800; font-size: 1.18rem; }
     .brand-logo {
       width: 42px; height: 42px; border-radius: 50%; object-fit: contain;
-      background: #fffaf2; padding: 3px; border: 2px solid var(--gold);
-      box-shadow: 0 4px 14px rgba(200, 150, 62, 0.4);
+      background: #f6f9ff; padding: 3px; border: 2px solid var(--gold);
+      box-shadow: 0 4px 14px rgba(212, 168, 79, 0.4);
       flex-shrink: 0;
     }
     .brand-hi { color: var(--gold-light); font-size: 1.3rem; }
     .clock-pill {
       display: inline-flex; align-items: center; gap: 6px;
-      background: rgba(255, 250, 242, 0.09); border: 1px solid rgba(240, 215, 167, 0.3);
+      background: rgba(246, 249, 255, 0.10); border: 1px solid rgba(246, 226, 179, 0.35);
       color: var(--gold-light); padding: 4px 11px; border-radius: 999px;
       font-size: 0.72rem; font-weight: 700; cursor: pointer;
     }
 
-    nav { display: flex; gap: 4px; flex-wrap: wrap; background: rgba(255, 250, 242, 0.08); padding: 4px; border-radius: 999px; }
+    nav { display: flex; gap: 4px; flex-wrap: wrap; background: rgba(246, 249, 255, 0.08); padding: 4px; border-radius: 999px; }
     .nav-btn {
-      background: transparent; color: #efe3d3; border: none;
+      background: transparent; color: #dce7ff; border: none;
       padding: 7px 11px; border-radius: 999px; font-weight: 700; font-size: 0.77rem;
       cursor: pointer; transition: all 0.25s ease; white-space: nowrap;
     }
-    .nav-btn:hover { color: #fff; background: rgba(200, 150, 62, 0.24); }
-    .nav-btn.active { background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--espresso); }
-    .nav-owner { border: 1px solid rgba(200, 150, 62, 0.55); color: var(--gold-light); }
+    .nav-btn:hover { color: #fff; background: rgba(37, 87, 196, 0.36); }
+    .nav-btn.active { background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--royal-deep); }
+    .nav-owner { border: 1px solid rgba(212, 168, 79, 0.6); color: var(--gold-light); }
 
     @media (max-width: 980px) {
       .nav-shell { top: 6px; padding: 0 8px; }
@@ -109,19 +109,19 @@
     .page-view.active { display: block; }
 
     /* =========================================================================
-       IMMEDIATE NO-SCROLL ANIMATED HERO ("महफ़िल Cafe" + FLOATING FOODS)
+       IMMEDIATE NO-SCROLL ROYAL BLUE HERO ("महफ़िल Cafe" + FLOATING FOODS)
        ========================================================================= */
     .hero-showcase {
       position: relative;
       min-height: 100vh;
       padding: 112px 20px 64px;
-      background: radial-gradient(circle at 75% 42%, #59311e 0%, #331b10 52%, #1a0c06 100%);
-      color: #fffaf2;
+      background: radial-gradient(circle at 75% 42%, #2557c4 0%, #132f73 52%, #081533 100%);
+      color: #f6f9ff;
       display: flex;
       align-items: center;
       overflow: hidden;
       border-radius: 0 0 48px 48px;
-      box-shadow: 0 24px 55px rgba(26, 12, 6, 0.32);
+      box-shadow: 0 24px 55px rgba(8, 21, 51, 0.34);
     }
     .hero-inner {
       max-width: 1200px; margin: 0 auto; width: 100%;
@@ -139,7 +139,7 @@
       display: inline-block;
       font-size: clamp(3rem, 6.2vw, 4.9rem);
       font-weight: 900;
-      background: linear-gradient(120deg, #f7e2b8 0%, #c8963e 45%, #fff3d6 75%, #c8963e 100%);
+      background: linear-gradient(120deg, #f6e2b3 0%, #d4a84f 45%, #fff8e7 75%, #d4a84f 100%);
       background-size: 220% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -152,7 +152,7 @@
       font-style: italic;
       font-size: clamp(2.7rem, 5.5vw, 4.3rem);
       font-weight: 700;
-      color: #fffaf2;
+      color: #f6f9ff;
       margin-left: 10px;
       opacity: 0;
       transform: translateY(22px);
@@ -166,14 +166,14 @@
 
     .hero-pill {
       display: inline-flex; align-items: center; gap: 7px;
-      background: rgba(200, 150, 62, 0.16); border: 1px solid rgba(240, 215, 167, 0.42);
+      background: rgba(212, 168, 79, 0.18); border: 1px solid rgba(246, 226, 179, 0.45);
       color: var(--gold-light); padding: 5px 15px; border-radius: 999px;
       font-size: 0.76rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
       margin-bottom: 14px;
     }
-    .hero-subtext { color: #ebd9c3; font-size: 1rem; max-width: 50ch; margin-bottom: 16px; }
+    .hero-subtext { color: #dce7ff; font-size: 1rem; max-width: 50ch; margin-bottom: 16px; }
     .hero-quote-box {
-      background: rgba(255, 250, 242, 0.08);
+      background: rgba(246, 249, 255, 0.09);
       border-left: 3px solid var(--gold);
       padding: 10px 15px; border-radius: 0 16px 16px 0;
       color: var(--gold-light); font-style: italic; font-size: 0.9rem;
@@ -187,7 +187,7 @@
     .center-platter {
       width: 248px; height: 248px; border-radius: 50%;
       border: 4px solid var(--gold);
-      box-shadow: 0 24px 55px rgba(0, 0, 0, 0.55), 0 0 0 14px rgba(200, 150, 62, 0.14);
+      box-shadow: 0 24px 55px rgba(0, 0, 0, 0.52), 0 0 0 14px rgba(212, 168, 79, 0.16);
       overflow: hidden; position: relative; z-index: 5;
       animation: centerFloat 5s ease-in-out infinite;
     }
@@ -199,20 +199,20 @@
 
     .float-dish {
       position: absolute; z-index: 8;
-      background: rgba(255, 250, 242, 0.96);
-      color: #24130c;
+      background: rgba(255, 255, 255, 0.96);
+      color: #0f1c38;
       border: 2px solid var(--gold);
       border-radius: 22px;
       padding: 7px 11px 7px 7px;
       display: flex; align-items: center; gap: 9px;
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.36);
       cursor: pointer;
       transition: transform 0.25s ease;
     }
     .float-dish:hover { transform: scale(1.08) !important; }
     .float-dish img { width: 44px; height: 44px; border-radius: 14px; object-fit: cover; }
     .float-dish b { display: block; font-size: 0.78rem; line-height: 1.2; }
-    .float-dish span { font-size: 0.72rem; font-weight: 800; color: var(--caramel); }
+    .float-dish span { font-size: 0.72rem; font-weight: 800; color: var(--royal-bright); }
 
     .fd-1 { top: 14px; left: 4px; animation: bob1 4.2s ease-in-out infinite; }
     .fd-2 { top: 24px; right: 2px; animation: bob2 4.8s ease-in-out infinite; }
@@ -224,7 +224,7 @@
 
     .steam-wisp {
       position: absolute; top: 34px; width: 16px; height: 65px;
-      background: linear-gradient(to top, rgba(255, 250, 242, 0.45), transparent);
+      background: linear-gradient(to top, rgba(255, 255, 255, 0.45), transparent);
       border-radius: 50%; filter: blur(7px); z-index: 6; pointer-events: none;
       animation: steamUp 3.2s ease-in-out infinite;
     }
@@ -237,7 +237,7 @@
     }
 
     /* =========================================================================
-       EXTENDED SCROLL SECTIONS: INTRO, QUOTES, AUTO SLIDER & 4-5 WORD LINES
+       EXTENDED SCROLL SECTIONS: INTRO, ROYAL GALLERY, AUTO SLIDER & PHRASES
        ========================================================================= */
     .story-section { max-width: 1200px; margin: 54px auto 0; padding: 0 18px 40px; }
 
@@ -260,21 +260,21 @@
 
     .cafe-art-frame {
       position: relative; border-radius: 28px; overflow: hidden;
-      border: 2.5px solid var(--gold); box-shadow: 0 22px 48px rgba(0, 0, 0, 0.25);
+      border: 2.5px solid var(--gold); box-shadow: 0 22px 48px rgba(11, 29, 69, 0.24);
     }
     .cafe-art-frame::after {
       content: ""; position: absolute; inset: 0;
-      background: linear-gradient(165deg, rgba(200, 150, 62, 0.16) 0%, rgba(40, 21, 13, 0.32) 100%);
+      background: linear-gradient(165deg, rgba(37, 87, 196, 0.14) 0%, rgba(11, 29, 69, 0.30) 100%);
       pointer-events: none;
     }
     .cafe-art-frame img {
       width: 100%; height: 295px; object-fit: cover; display: block;
-      filter: contrast(1.08) saturate(1.15) sepia(0.08); transition: transform 0.75s ease;
+      filter: contrast(1.07) saturate(1.12); transition: transform 0.75s ease;
     }
     .cafe-art-frame:hover img { transform: scale(1.06); }
     .cafe-art-badge {
       position: absolute; bottom: 14px; left: 14px; z-index: 2;
-      background: rgba(34, 17, 10, 0.88); backdrop-filter: blur(8px);
+      background: rgba(11, 29, 69, 0.90); backdrop-filter: blur(8px);
       color: var(--gold-light); border: 1px solid var(--gold);
       padding: 5px 13px; border-radius: 999px; font-size: 0.74rem; font-weight: 700;
     }
@@ -293,10 +293,9 @@
       transition: opacity 0.48s ease, transform 0.48s cubic-bezier(0.22, 1, 0.36, 1);
     }
     .phrase-line.in-view .word-span { opacity: 1; transform: translateY(0); }
-    .phrase-line .word-span.gold-accent { color: var(--gold); font-style: italic; }
-    .quote-subline {
-      margin-top: 10px; font-size: 0.94rem; font-style: italic; color: var(--muted);
-    }
+    .phrase-line .word-span.gold-accent { color: var(--royal-bright); font-style: italic; }
+    body.night-mode .phrase-line .word-span.gold-accent { color: var(--gold-light); }
+    .quote-subline { margin-top: 10px; font-size: 0.94rem; font-style: italic; color: var(--muted); }
 
     .auto-carousel-wrap {
       margin: 34px 0 44px; overflow: hidden; padding: 10px 0;
@@ -311,7 +310,7 @@
       border-radius: 26px; overflow: hidden; box-shadow: var(--shadow); flex-shrink: 0;
       transition: transform 0.3s ease, border-color 0.3s ease;
     }
-    .slide-food-card:hover { transform: translateY(-6px); border-color: var(--gold); }
+    .slide-food-card:hover { transform: translateY(-6px); border-color: var(--royal-bright); }
     .slide-food-card img { width: 100%; height: 168px; object-fit: cover; filter: contrast(1.05) saturate(1.12); }
     .slide-food-card .sfc-body { padding: 13px 15px; }
     .slide-food-card b { display: block; font-size: 0.95rem; color: var(--ink); }
@@ -325,7 +324,7 @@
       background: var(--card-bg); border: 1.5px solid var(--border); border-radius: 28px;
       overflow: hidden; box-shadow: var(--shadow); transition: transform 0.35s ease, border-color 0.3s ease;
     }
-    .lounge-tile:hover { transform: translateY(-6px); border-color: var(--gold); }
+    .lounge-tile:hover { transform: translateY(-6px); border-color: var(--royal-bright); }
     .lounge-tile img { width: 100%; height: 210px; object-fit: cover; filter: contrast(1.06) saturate(1.12); }
     .lounge-tile .lt-body { padding: 18px; }
     .lounge-tile h3 { font-size: 1.08rem; color: var(--ink); margin-bottom: 5px; }
@@ -333,20 +332,20 @@
     /* BUTTONS */
     .btn {
       position: relative; overflow: hidden;
-      background: linear-gradient(135deg, var(--roast), var(--caramel));
-      color: #fffaf2; border: none; padding: 11px 24px;
+      background: linear-gradient(135deg, var(--royal), var(--royal-bright));
+      color: #ffffff; border: none; padding: 11px 24px;
       border-radius: 999px; font-weight: 700; font-size: 0.89rem; cursor: pointer;
       display: inline-flex; align-items: center; justify-content: center; gap: 7px;
       transition: transform 0.22s ease, box-shadow 0.25s ease; min-height: 43px;
     }
-    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(70, 37, 23, 0.3); }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(22, 58, 138, 0.32); }
     .btn:active { transform: scale(0.97); }
     .btn-gold {
       background: linear-gradient(135deg, var(--gold), var(--gold-light));
-      color: #24130c; box-shadow: 0 10px 26px rgba(200, 150, 62, 0.35);
+      color: #0f1c38; box-shadow: 0 10px 26px rgba(212, 168, 79, 0.35);
     }
     .btn-ghost { background: var(--card-bg); color: var(--ink); border: 1.5px solid var(--border); }
-    .btn-ghost:hover { border-color: var(--gold); background: var(--bg-sec); }
+    .btn-ghost:hover { border-color: var(--royal-bright); background: var(--bg-sec); }
 
     .subpage-wrap { max-width: 1200px; margin: 0 auto; padding: 105px 16px 115px; }
     @media (max-width: 980px) { .subpage-wrap { padding-top: 146px; } }
@@ -362,14 +361,15 @@
       overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; justify-content: space-between;
       transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.3s ease;
     }
-    .m-card:hover { transform: translateY(-6px); border-color: var(--gold); }
+    .m-card:hover { transform: translateY(-6px); border-color: var(--royal-bright); }
     .m-card .img-box { position: relative; overflow: hidden; height: 196px; background: var(--bg-sec); }
     .m-card img { width: 100%; height: 100%; object-fit: cover; filter: contrast(1.06) saturate(1.14); transition: transform 0.6s ease; }
     .m-card:hover img { transform: scale(1.07); }
     .mc-body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; justify-content: space-between; }
-    .tag { background: var(--bg-sec); color: var(--gold); font-size: 0.72rem; padding: 3px 11px; border-radius: 999px; font-weight: 700; display: inline-block; border: 1px solid var(--border); }
+    .tag { background: var(--bg-sec); color: var(--royal-bright); font-size: 0.72rem; padding: 3px 11px; border-radius: 999px; font-weight: 700; display: inline-block; border: 1px solid var(--border); }
+    body.night-mode .tag { color: var(--gold-light); }
     .tag-veg { background: #dcfce7; color: #166534; border-color: #86efac; }
-    .tag-hot { background: #ffedd5; color: #9a3412; border-color: #fdba74; }
+    .tag-hot { background: #fef3c7; color: #92400e; border-color: #fcd34d; }
     .meta { font-size: 0.84rem; color: var(--muted); }
     .price { font-weight: 800; font-size: 1.2rem; color: var(--ink); }
     .row { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; position: relative; }
@@ -377,8 +377,8 @@
     .plus-one-pop {
       position: absolute; right: 14px; bottom: 46px;
       background: linear-gradient(135deg, var(--gold), var(--gold-light));
-      color: #24130c; font-weight: 900; font-size: 0.88rem;
-      padding: 4px 12px; border-radius: 999px; border: 1.5px solid #24130c;
+      color: #0f1c38; font-weight: 900; font-size: 0.88rem;
+      padding: 4px 12px; border-radius: 999px; border: 1.5px solid #0f1c38;
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25); pointer-events: none; z-index: 15;
       animation: floatPlusOne 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     }
@@ -391,7 +391,7 @@
 
     .qty-pill-badge {
       position: absolute; top: 12px; right: 12px;
-      background: rgba(34, 17, 10, 0.92); color: var(--gold-light);
+      background: rgba(11, 29, 69, 0.92); color: var(--gold-light);
       border: 1.5px solid var(--gold); font-size: 0.75rem; font-weight: 800;
       padding: 4px 11px; border-radius: 999px; z-index: 5;
     }
@@ -402,21 +402,21 @@
       position: fixed; bottom: 18px; left: 50%;
       transform: translateX(-50%) translateY(130%);
       width: calc(100% - 28px); max-width: 580px;
-      background: linear-gradient(135deg, var(--espresso), var(--roast));
-      color: #fffaf2; border: 2px solid var(--gold);
+      background: linear-gradient(135deg, var(--royal-deep), var(--royal));
+      color: #f6f9ff; border: 2px solid var(--gold);
       border-radius: 999px; padding: 11px 16px 11px 20px;
       display: flex; justify-content: space-between; align-items: center; gap: 12px;
-      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.45); z-index: 95;
+      box-shadow: 0 18px 44px rgba(8, 21, 51, 0.45); z-index: 95;
       transition: transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
       opacity: 0; pointer-events: none;
     }
     .tray-toast.show { transform: translateX(-50%) translateY(0); opacity: 1; pointer-events: auto; }
     .toast-info { display: flex; flex-direction: column; min-width: 0; }
     .toast-title { font-size: 0.88rem; font-weight: 800; color: var(--gold-light); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .toast-sub { font-size: 0.77rem; color: #efe3d3; }
+    .toast-sub { font-size: 0.77rem; color: #dce7ff; }
     .toast-cta {
       background: linear-gradient(135deg, var(--gold), var(--gold-light));
-      color: #24130c; border: none; padding: 9px 18px;
+      color: #0f1c38; border: none; padding: 9px 18px;
       border-radius: 999px; font-weight: 800; font-size: 0.84rem;
       cursor: pointer; white-space: nowrap; flex-shrink: 0;
     }
@@ -428,18 +428,18 @@
     .filter-bar { background: var(--card-bg); border: 1.5px solid var(--border); border-radius: 26px; padding: 14px; margin-bottom: 18px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
     .pills { display: flex; gap: 6px; flex-wrap: wrap; }
     .pill { padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: var(--bg-main); font-weight: 600; font-size: 0.81rem; cursor: pointer; color: var(--muted); transition: 0.2s; }
-    .pill.active { background: var(--espresso); color: var(--gold-light); border-color: var(--gold); }
+    .pill.active { background: var(--royal-deep); color: var(--gold-light); border-color: var(--gold); }
     .search-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; width: 100%; }
     @media (min-width: 820px) { .search-row { width: auto; } }
 
     input, select { width: 100%; padding: 11px 16px; border: 1.5px solid var(--border); border-radius: 999px; margin: 4px 0 11px; font-size: 16px; background: var(--input-bg); color: var(--ink); transition: border-color 0.2s; }
-    input:focus, select:focus { outline: none; border-color: var(--gold); }
+    input:focus, select:focus { outline: none; border-color: var(--royal-bright); }
     .bill-card { background: var(--bill-bg); border: 1.5px solid var(--border); padding: 16px 18px; border-radius: 22px; margin-top: 12px; font-size: 0.94rem; line-height: 1.8; }
 
     /* OWNER PORTAL KPI CARDS */
     .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; margin-bottom: 24px; }
     .kpi-card {
-      background: linear-gradient(145deg, var(--espresso), var(--roast));
+      background: linear-gradient(145deg, var(--royal-deep), var(--royal));
       color: var(--gold-light); border: 2px solid var(--gold);
       border-radius: 24px; padding: 20px; box-shadow: var(--shadow);
     }
@@ -451,10 +451,10 @@
       padding: 12px 15px; border: 1px solid var(--border); border-left-width: 4px; font-size: 0.86rem;
     }
 
-    /* MODERN GOLDEN-BROWN PAYMENT GATEWAY */
+    /* ROYAL BLUE PAYMENT GATEWAY */
     .sheet-backdrop {
       display: none; position: fixed; inset: 0;
-      background: rgba(20, 10, 5, 0.82); backdrop-filter: blur(6px);
+      background: rgba(7, 17, 38, 0.82); backdrop-filter: blur(6px);
       z-index: 105; align-items: flex-end; justify-content: center;
     }
     .sheet-backdrop.open { display: flex; }
@@ -472,8 +472,8 @@
     @keyframes slideUpSheet { from { transform: translateY(100%); opacity: 0.5; } to { transform: translateY(0); opacity: 1; } }
 
     .gw-header {
-      background: linear-gradient(135deg, var(--espresso), var(--roast));
-      color: #fffaf2; padding: 18px 24px 20px; text-align: center;
+      background: linear-gradient(135deg, var(--royal-deep), var(--royal));
+      color: #f6f9ff; padding: 18px 24px 20px; text-align: center;
       border-bottom: 2px solid var(--gold); border-radius: 0 0 28px 28px;
     }
     .gw-body { padding: 20px 24px 24px; }
@@ -483,7 +483,7 @@
       text-align: center; font-weight: 700; font-size: 0.81rem; cursor: pointer;
       background: var(--bg-main); color: var(--muted); transition: 0.2s;
     }
-    .mpill.active { border-color: var(--gold); background: var(--bg-sec); color: var(--ink); }
+    .mpill.active { border-color: var(--royal-bright); background: var(--bg-sec); color: var(--ink); }
 
     .qr-box {
       background: var(--bg-sec); border: 1.5px dashed var(--gold);
@@ -491,33 +491,33 @@
     }
     .qr-ring {
       display: inline-block; padding: 7px; border-radius: 24px;
-      background: conic-gradient(from 45deg, #462517, #c8963e, #8c5332, #f0d7a7, #462517);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+      background: conic-gradient(from 45deg, #163a8a, #d4a84f, #2557c4, #f6e2b3, #163a8a);
+      box-shadow: 0 10px 24px rgba(11, 29, 69, 0.28);
     }
-    .qr-ring img { width: 136px; height: 136px; border-radius: 18px; display: block; background: #fffdf9; padding: 5px; }
+    .qr-ring img { width: 136px; height: 136px; border-radius: 18px; display: block; background: #fbfdff; padding: 5px; }
     .upi-tag {
       display: inline-flex; align-items: center; gap: 8px;
-      background: #fff; color: #24130c; border: 1.5px solid var(--border);
+      background: #fff; color: #0f1c38; border: 1.5px solid var(--border);
       padding: 6px 14px; border-radius: 999px; margin-top: 10px; font-size: 0.82rem;
     }
-    .copy-mini { background: var(--roast); color: #fff; border: none; padding: 4px 11px; border-radius: 999px; font-size: 0.74rem; font-weight: 700; cursor: pointer; }
+    .copy-mini { background: var(--royal); color: #fff; border: none; padding: 4px 11px; border-radius: 999px; font-size: 0.74rem; font-weight: 700; cursor: pointer; }
     .app-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 10px; }
     .app-btn {
       display: block; text-align: center; padding: 7px 4px; border-radius: 999px;
-      background: #fff; border: 1.5px solid var(--border); color: #24130c;
+      background: #fff; border: 1.5px solid var(--border); color: #0f1c38;
       text-decoration: none; font-weight: 700; font-size: 0.77rem; transition: 0.2s;
     }
-    .app-btn:hover { background: var(--espresso); color: var(--gold-light); }
+    .app-btn:hover { background: var(--royal-deep); color: var(--gold-light); }
 
     .tracker { font-size: 0.81rem; padding: 10px 14px; border-radius: 18px; margin-top: 8px; font-weight: 600; background: #fef9c3; color: #854d0e; border: 1px solid #fde047; }
     .tracker.fail { background: #fee2e2; color: var(--danger); border-color: #fca5a5; }
     .tracker.ok { background: #dcfce7; color: var(--success); border-color: #86efac; }
 
     /* MODALS (CUSTOMER LOGIN & RECEIPT) */
-    .modal { display: none; position: fixed; inset: 0; background: rgba(20, 10, 5, 0.82); backdrop-filter: blur(4px); z-index: 115; place-items: center; padding: 14px; overflow-y: auto; }
+    .modal { display: none; position: fixed; inset: 0; background: rgba(7, 17, 38, 0.82); backdrop-filter: blur(4px); z-index: 115; place-items: center; padding: 14px; overflow-y: auto; }
     .modal.open { display: grid; }
     .rec-box { background: var(--card-bg); border: 2px solid var(--gold); border-radius: 30px; max-width: 460px; width: 100%; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.45); }
-    .rec-head { background: var(--espresso); color: #fffaf2; padding: 18px 20px; text-align: center; border-bottom: 2px solid var(--gold); }
+    .rec-head { background: var(--royal-deep); color: #f6f9ff; padding: 18px 20px; text-align: center; border-bottom: 2px solid var(--gold); }
     .receipt-paper { background: var(--bg-main); border: 1.5px dashed var(--gold); border-radius: 18px; padding: 14px; margin-top: 8px; font-size: 0.85rem; }
     .rl { display: flex; justify-content: space-between; padding: 4px 0; gap: 8px; }
     .status-notice {
@@ -531,7 +531,7 @@
     th, td { padding: 11px 13px; text-align: left; border-bottom: 1px solid var(--border); }
     th { background: var(--bg-sec); color: var(--ink); font-weight: 700; }
 
-    footer { background: var(--espresso); color: #e5d6c3; text-align: center; padding: 30px 16px; font-size: 0.86rem; line-height: 1.75; border-top: 2px solid var(--gold); margin-top: 40px; }
+    footer { background: var(--royal-deep); color: #dce7ff; text-align: center; padding: 30px 16px; font-size: 0.86rem; line-height: 1.75; border-top: 2px solid var(--gold); margin-top: 40px; }
   </style>
 </head>
 <body>
@@ -543,7 +543,7 @@
       <div class="mast">
         <div class="brand-row-mob" style="display:flex;align-items:center;gap:10px">
           <div class="brand" onclick="switchPage('home')">
-            <img src="logo.jpg?v=4" alt="महफ़िल Cafe Logo" class="brand-logo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%2328150d%22/><text x=%2250%22 y=%2262%22 font-family=%22Georgia,serif%22 font-size=%2238%22 font-weight=%22bold%22 fill=%22%23c8963e%22 text-anchor=%22middle%22>मC</text></svg>'" />
+            <img src="logo.jpg?v=5" alt="महफ़िल Cafe Logo" class="brand-logo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%230b1d45%22/><text x=%2250%22 y=%2262%22 font-family=%22Georgia,serif%22 font-size=%2238%22 font-weight=%22bold%22 fill=%22%23d4a84f%22 text-anchor=%22middle%22>मC</text></svg>'" />
             <div>
               <span><span class="brand-hi">महफ़िल</span> Cafe</span>
             </div>
@@ -576,13 +576,13 @@
               <span class="eng-word">Cafe</span>
             </h1>
           </div>
-          <p class="hero-subtext">Where golden roasted espressos, thick artisanal shakes, wood-fired sourdough pizzas, and tandoori kulhad chai come together in warm modern luxury.</p>
+          <p class="hero-subtext">Where royal blue sophistication, thick artisanal shakes, wood-fired sourdough pizzas, and tandoori kulhad chai come together in warm modern luxury.</p>
           <div class="hero-quote-box">
             “जहाँ लफ़्ज़ कम पड़ जाएँ, वहाँ एक प्याली चाय, मीठा शेक और महफ़िल काफी होती है।”
           </div>
           <div class="hero-cta-row" style="display:flex;gap:12px;flex-wrap:wrap">
             <button class="btn btn-gold" onclick="switchPage('menu')">Explore Menu (32 Items) →</button>
-            <button class="btn" style="background:rgba(255,250,242,0.12);border:1.5px solid var(--gold)" onclick="openCustomerLoginModal()">👤 Customer Gmail Login</button>
+            <button class="btn" style="background:rgba(246,249,255,0.14);border:1.5px solid var(--gold)" onclick="openCustomerLoginModal()">👤 Customer Gmail Login</button>
           </div>
         </div>
 
@@ -591,7 +591,7 @@
           <div class="steam-wisp sw-2"></div>
 
           <div class="center-platter">
-            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=700&q=85" alt="Signature Velvet Latte" />
+            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=85" alt="Silk Hazelnut Velvet Latte" />
           </div>
 
           <div class="float-dish fd-1" onclick="addToCart(1, null)">
@@ -628,8 +628,8 @@
       <div class="intro-card reveal-block">
         <div>
           <span class="tag" style="margin-bottom:10px">Welcome to महफ़िल Cafe</span>
-          <h2 style="font-size:clamp(1.45rem, 3vw, 1.95rem);color:var(--ink);margin-bottom:12px">A Modern Sanctuary of Aroma, Spice &amp; Conversation</h2>
-          <p class="meta" style="font-size:0.95rem;margin-bottom:12px">Nestled on Main Bidholi Road near UPES Dehradun, <b>महफ़िल Cafe</b> brings together single-estate Chikmagalur coffee craftsmanship, thick gourmet shakes, bubbling wood-fired pizzas, and tandoori kulhad chai in a warm golden-brown lounge.</p>
+          <h2 style="font-size:clamp(1.45rem, 3vw, 1.95rem);color:var(--ink);margin-bottom:12px">A Royal Sanctuary of Aroma, Spice &amp; Conversation</h2>
+          <p class="meta" style="font-size:0.95rem;margin-bottom:12px">Nestled on Main Bidholi Road near UPES Dehradun, <b>महफ़िल Cafe</b> brings together single-estate Chikmagalur coffee craftsmanship, thick gourmet shakes, bubbling wood-fired pizzas, and tandoori kulhad chai in a refined royal-blue &amp; gold lounge.</p>
           <p class="meta" style="font-size:0.95rem;margin-bottom:18px">Sign in with your Gmail to receive beautifully formatted live order status updates directly from our kitchen.</p>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
             <button class="btn" onclick="switchPage('menu')">Browse All 32 Dishes →</button>
@@ -637,8 +637,8 @@
           </div>
         </div>
         <div class="cafe-art-frame">
-          <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=900&q=85" alt="Mehfil Cafe Golden Lounge Interior" />
-          <span class="cafe-art-badge">✦ The Golden Hour Lounge • Bidholi</span>
+          <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=900&q=85" alt="Mehfil Cafe Royal Lounge Interior" />
+          <span class="cafe-art-badge">✦ The Royal Lounge • Bidholi</span>
         </div>
       </div>
 
@@ -655,18 +655,18 @@
 
       <!-- 4-5 WORD ANIMATED LINE 3 -->
       <div class="short-phrase-band reveal-block">
-        <div class="phrase-line reveal-phrase" data-words="Golden|lights,|velvet|sips,|lasting|memories." data-gold="velvet"></div>
-        <div class="quote-subline">“A quiet corner by day, a lively महफ़िल by night.”</div>
+        <div class="phrase-line reveal-phrase" data-words="Royal|lights,|velvet|sips,|lasting|memories." data-gold="velvet"></div>
+        <div class="quote-subline">“A serene corner by day, a lively महफ़िल by night.”</div>
       </div>
 
       <!-- EXTRA SCROLL SECTION: 3-CARD LOUNGE & CULINARY EXPERIENCE -->
       <div class="lounge-trio reveal-block">
         <div class="lounge-tile">
-          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=85" alt="Artisanal Coffee Pour" />
+          <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=85" alt="Silk Hazelnut Velvet Latte" />
           <div class="lt-body">
             <span class="tag" style="margin-bottom:6px">Single-Estate Roasts</span>
-            <h3>Hand-Poured Espresso &amp; Kulhad Chai</h3>
-            <p class="meta">Freshly ground Chikmagalur Arabica beans and slow-simmered cardamom masala chai.</p>
+            <h3>Silk Hazelnut &amp; Kulhad Chai</h3>
+            <p class="meta">Double espresso swirled with velvety hazelnut foam and slow-simmered cardamom chai.</p>
           </div>
         </div>
         <div class="lounge-tile">
@@ -682,7 +682,7 @@
           <div class="lt-body">
             <span class="tag" style="margin-bottom:6px">Auto Day / Night</span>
             <h3>Daylight Roastery &amp; Midnight Lounge</h3>
-            <p class="meta">Automatically adapts from warm ivory daylight to deep espresso midnight ambience.</p>
+            <p class="meta">Automatically adapts from crisp royal daylight to deep sapphire midnight ambience.</p>
           </div>
         </div>
       </div>
@@ -745,7 +745,7 @@
           </div>
           <h3 style="color:var(--ink);margin-bottom:8px">Lounge Zones &amp; Policy</h3>
           <p class="meta" style="margin-bottom:6px"><b>• Reservation Fee:</b> ₹500 + 5% GST (₹525 total; ₹500 adjustable in final bill).</p>
-          <p class="meta" style="margin-bottom:6px"><b>• Golden Study Corner:</b> Power sockets + 300 Mbps fiber Wi-Fi.</p>
+          <p class="meta" style="margin-bottom:6px"><b>• Royal Study Corner:</b> Power sockets + 300 Mbps fiber Wi-Fi.</p>
           <p class="meta" style="margin-bottom:6px"><b>• Sunset Patio &amp; Lounge:</b> Shakes, wood-fired pizzas, sizzlers &amp; evenings.</p>
           <p class="meta"><b>• Address:</b> Main Bidholi Road, Near UPES Campus Gate, Dehradun 248007</p>
         </div>
@@ -776,7 +776,7 @@
             </div>
             <label style="font-weight:600;font-size:0.88rem">Time Slot &amp; Zone</label>
             <select id="bkSlot">
-              <option>11:00 AM — Golden Study Corner</option>
+              <option>11:00 AM — Royal Study Corner</option>
               <option>02:30 PM — Window Espresso Bar</option>
               <option>06:00 PM — Sizzler &amp; Lounge Booth</option>
               <option>08:30 PM — Evening Patio Deck</option>
@@ -916,7 +916,6 @@
           <div class="msg-feed" id="ownerMessagesFeed"></div>
         </div>
 
-        <!-- 1. FULL ORDER HISTORY TABLE -->
         <div class="sec-head">
           <div>
             <h2>Backend Order History</h2>
@@ -939,7 +938,6 @@
           </table>
         </div>
 
-        <!-- 2. FULL PAYMENT HISTORY TABLE -->
         <div class="sec-head" style="margin-top:32px">
           <div>
             <h2>Backend Payment History</h2>
@@ -999,7 +997,7 @@
     <button type="button" class="toast-cta" onclick="switchPage('order')">View Tray →</button>
   </div>
 
-  <!-- MODERN GOLDEN-BROWN PAYMENT GATEWAY -->
+  <!-- ROYAL BLUE PAYMENT GATEWAY -->
   <div class="sheet-backdrop" id="paySheetBackdrop" onclick="if(event.target===this) closePaymentModal()">
     <div class="pay-sheet">
       <div class="gw-header">
@@ -1007,9 +1005,9 @@
           <span style="font-size:0.75rem;color:var(--gold-light);font-weight:700;letter-spacing:0.08em;text-transform:uppercase">✦ MehfilPay Auto-Verify Checkout ✦</span>
           <button type="button" onclick="closePaymentModal()" style="border:1px solid var(--gold);background:rgba(255,255,255,0.1);color:#fff;width:30px;height:30px;border-radius:50%;font-size:1rem;cursor:pointer">✕</button>
         </div>
-        <div style="font-size:0.84rem;color:#efe3d3" id="gwTitle">महफ़िल Cafe Checkout</div>
+        <div style="font-size:0.84rem;color:#dce7ff" id="gwTitle">महफ़िल Cafe Checkout</div>
         <div style="font-size:2.1rem;font-weight:900;color:var(--gold-light);line-height:1.15;margin-top:2px" id="modalPayAmt">₹0</div>
-        <div style="font-size:0.74rem;color:#efe3d3">Inclusive of 5% GST • Automatic Owner Verification</div>
+        <div style="font-size:0.74rem;color:#dce7ff">Inclusive of 5% GST • Automatic Owner Verification</div>
       </div>
 
       <div class="gw-body">
@@ -1060,7 +1058,7 @@
     const MENU = [
       // CHAI & SPECIALTY COFFEE (6)
       { id: 1, name: "Tandoori Matka Kulhad Chai", cat: "Chai & Specialty Coffee", price: 65, pure: true, desc: "Simmered Assam CTC & crushed green cardamom poured sizzling into a roasted clay kulhad.", img: "https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?auto=format&fit=crop&w=700&q=85" },
-      { id: 2, name: "Silk Hazelnut Velvet Latte", cat: "Chai & Specialty Coffee", price: 195, pure: true, desc: "Double Chikmagalur espresso swirled with roasted hazelnut cream & velvety micro-foam.", img: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=700&q=85" },
+      { id: 2, name: "Silk Hazelnut Velvet Latte", cat: "Chai & Specialty Coffee", price: 195, pure: true, desc: "Double Chikmagalur espresso swirled with silky hazelnut latte art & warm micro-foam.", img: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=85" },
       { id: 3, name: "Kashmiri Kesar Badam Kahwa", cat: "Chai & Specialty Coffee", price: 140, pure: true, desc: "Fragrant green tea brewed with Pampore saffron strands, cinnamon bark & slivered almonds.", img: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=700&q=85" },
       { id: 4, name: "Iced Caramel Macchiato Cloud", cat: "Chai & Specialty Coffee", price: 210, pure: true, desc: "Chilled vanilla-infused milk marked with rich espresso shots & golden caramel drizzle.", img: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=85" },
       { id: 5, name: "Iced Ceremonial Matcha Oat Latte", cat: "Chai & Specialty Coffee", price: 205, pure: true, desc: "Whisked shade-grown green tea layered over chilled oat milk & organic wildflower honey.", img: "https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=700&q=85" },
@@ -1104,11 +1102,11 @@
     ];
 
     let cart = [];
-    let paymentLogs = JSON.parse(localStorage.getItem("mc_payment_logs") || "[]");
-    let bookingLogs = JSON.parse(localStorage.getItem("mc_booking_logs") || "[]");
-    let ownerMessages = JSON.parse(localStorage.getItem("mc_owner_msgs") || "[]");
-    let currentCustomer = JSON.parse(localStorage.getItem("mc_customer_user") || "null");
-    let isOwnerLoggedIn = sessionStorage.getItem("mc_owner_auth") === "true";
+    let paymentLogs = JSON.parse(localStorage.getItem("mc_rb_payment_logs") || "[]");
+    let bookingLogs = JSON.parse(localStorage.getItem("mc_rb_booking_logs") || "[]");
+    let ownerMessages = JSON.parse(localStorage.getItem("mc_rb_owner_msgs") || "[]");
+    let currentCustomer = JSON.parse(localStorage.getItem("mc_rb_customer_user") || "null");
+    let isOwnerLoggedIn = sessionStorage.getItem("mc_rb_owner_auth") === "true";
     let manualThemeOverride = null;
 
     let activeCat = "All";
@@ -1119,9 +1117,6 @@
     let toastTimer = null;
     let subTotal = 0, discAmt = 0, gstAmt = 0, finalTotal = 0, activePayable = 0;
 
-    /* =====================================================================
-       REAL-TIME IST DATE/TIME & AUTOMATIC DAY/NIGHT THEME ENGINE
-       ===================================================================== */
     function updateClockAndTheme() {
       const now = new Date();
       const timeStr = now.toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: true });
@@ -1145,9 +1140,6 @@
     setInterval(updateClockAndTheme, 1000);
     updateClockAndTheme();
 
-    /* =====================================================================
-       CUSTOMER GMAIL LOGIN LOGIC
-       ===================================================================== */
     function syncCustomerUI() {
       const label = document.getElementById("custNavLabel");
       if (currentCustomer && currentCustomer.email) {
@@ -1189,15 +1181,12 @@
         email: document.getElementById("loginCustEmail").value.trim(),
         phone: document.getElementById("loginCustPhone").value.trim()
       };
-      localStorage.setItem("mc_customer_user", JSON.stringify(currentCustomer));
+      localStorage.setItem("mc_rb_customer_user", JSON.stringify(currentCustomer));
       syncCustomerUI();
       closeCustomerLoginModal();
       showToastNotification(`Welcome, ${currentCustomer.name}`, `Gmail (${currentCustomer.email}) linked for status updates`);
     }
 
-    /* =====================================================================
-       INIT 4-5 WORD ANIMATED LINES, AUTO-CAROUSEL & SCROLL REVEAL OBSERVER
-       ===================================================================== */
     function initStoryAnimations() {
       document.querySelectorAll(".reveal-phrase").forEach(el => {
         const words = (el.dataset.words || "").split("|");
@@ -1207,7 +1196,7 @@
         ).join("");
       });
 
-      const slideItems = [1, 29, 30, 7, 9, 11, 13, 19, 25, 27].map(id => MENU.find(m => m.id === id)).filter(Boolean);
+      const slideItems = [2, 29, 30, 1, 7, 9, 11, 13, 19, 25].map(id => MENU.find(m => m.id === id)).filter(Boolean);
       const trackHtml = [...slideItems, ...slideItems].map(item => `
         <div class="slide-food-card">
           <img src="${item.img}" alt="${item.name}" />
@@ -1233,9 +1222,6 @@
       document.querySelectorAll(".reveal-block").forEach(b => observer.observe(b));
     }
 
-    /* =====================================================================
-       OWNER PORTAL AUTHENTICATION, LIVE REVENUE, ORDER & PAYMENT HISTORY
-       ===================================================================== */
     function handleOwnerLogin(e) {
       e.preventDefault();
       const email = document.getElementById("ownerEmailInput").value.trim().toLowerCase();
@@ -1244,7 +1230,7 @@
 
       if (email === OWNER_EMAIL && pass === OWNER_PASS) {
         isOwnerLoggedIn = true;
-        sessionStorage.setItem("mc_owner_auth", "true");
+        sessionStorage.setItem("mc_rb_owner_auth", "true");
         errEl.textContent = "";
         renderOwnerDashboard();
       } else {
@@ -1254,7 +1240,7 @@
 
     function logoutOwner() {
       isOwnerLoggedIn = false;
-      sessionStorage.removeItem("mc_owner_auth");
+      sessionStorage.removeItem("mc_rb_owner_auth");
       renderOwnerDashboard();
     }
 
@@ -1262,7 +1248,7 @@
       const idx = paymentLogs.findIndex(x => x.orderId === orderId);
       if (idx !== -1) {
         paymentLogs[idx].kitchenStatus = newStatus;
-        localStorage.setItem("mc_payment_logs", JSON.stringify(paymentLogs));
+        localStorage.setItem("mc_rb_payment_logs", JSON.stringify(paymentLogs));
         renderOwnerDashboard();
       }
     }
@@ -1270,11 +1256,11 @@
     function buildStyledOwnerGmailUrl(record) {
       const to = encodeURIComponent(record.custEmail || "");
       const status = record.kitchenStatus || "Preparing";
-      const su = encodeURIComponent(`✨ महफ़िल Cafe — Order ${record.orderId} Status: ${status.toUpperCase()}`);
+      const su = encodeURIComponent(`✦ महफ़िल Cafe — Order ${record.orderId} Status: ${status.toUpperCase()}`);
       const bodyText =
 `╔══════════════════════════════════════════╗
-        ✨  महफ़िल CAFE  •  DEHRADUN  ✨
-     Artisanal Kitchen, Shakes & Roastery
+        ✦  महफ़िल CAFE  •  DEHRADUN  ✨
+     Royal Blue Kitchen, Shakes & Roastery
 ╚══════════════════════════════════════════╝
 
 Namaste ${record.custName},
@@ -1293,7 +1279,7 @@ Here is the latest update on your order from महफ़िल Cafe!
   • Total Paid (w/GST) : ₹${record.amount}
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-“जहाँ लफ़्ज़ कम पड़ जाएँ, वहाँ एक प्याली चाय और महफ़िल काफी होती है।”
+“जहाँ लफ़्ज़ कम पड़ जाएँ, वहाँ एक प्याली चाय, मीठा शेक और महफ़िल काफी होती है।”
 
 Warm regards,
 Divyansh • महफ़िल Cafe
@@ -1333,7 +1319,6 @@ Main Bidholi Road, Near UPES Campus Gate, Dehradun`;
         </div>
       `).join("") : "<p class='meta'>No customer order notifications yet. When a user places an order, an instant auto-verified alert appears here.</p>";
 
-      // 1. ORDER HISTORY TABLE
       const ordersBody = document.getElementById("ownerOrdersTable");
       if (!paymentLogs.length) {
         ordersBody.innerHTML = `<tr><td colspan="6" style="text-align:center;color:var(--muted);padding:20px">No orders in history yet.</td></tr>`;
@@ -1361,7 +1346,6 @@ Main Bidholi Road, Near UPES Campus Gate, Dehradun`;
         }).join("");
       }
 
-      // 2. PAYMENT HISTORY TABLE
       const payBody = document.getElementById("ownerPaymentsTable");
       if (!paymentLogs.length) {
         payBody.innerHTML = `<tr><td colspan="7" style="text-align:center;color:var(--muted);padding:20px">No payment transactions recorded yet.</td></tr>`;
@@ -1385,9 +1369,9 @@ Main Bidholi Road, Near UPES Campus Gate, Dehradun`;
       paymentLogs = [];
       bookingLogs = [];
       ownerMessages = [];
-      localStorage.removeItem("mc_payment_logs");
-      localStorage.removeItem("mc_booking_logs");
-      localStorage.removeItem("mc_owner_msgs");
+      localStorage.removeItem("mc_rb_payment_logs");
+      localStorage.removeItem("mc_rb_booking_logs");
+      localStorage.removeItem("mc_rb_owner_msgs");
       renderOwnerDashboard();
       renderBookingHistory();
     }
@@ -1428,7 +1412,7 @@ Main Bidholi Road, Near UPES Campus Gate, Dehradun`;
         <div class="m-card" data-item-id="${item.id}">
           <div class="img-box">
             <span class="qty-pill-badge ${qty > 0 ? '' : 'hidden'}">In Tray: ${qty}</span>
-            <img src="${item.img}" alt="${item.name}" onerror="this.src='https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=700&q=85'" />
+            <img src="${item.img}" alt="${item.name}" onerror="this.src='https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=85'" />
           </div>
           <div class="mc-body">
             <div>
@@ -1634,13 +1618,13 @@ Main Bidholi Road, Near UPES Campus Gate, Dehradun`;
       const gpayUpi = `tez://upi/pay?${params}`;
       const phonepeUpi = `phonepe://pay?${params}`;
       const paytmUpi = `paytmmp://pay?${params}`;
-      const styledQrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&color=462517&bgcolor=fffdf9&qzone=1&data=${encodeURIComponent(genericUpi)}`;
+      const styledQrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&color=163a8a&bgcolor=fbfdff&qzone=1&data=${encodeURIComponent(genericUpi)}`;
 
       if (mode === "upi") {
         updateTracker("⏳ Auto-Verify Engine: Scan QR or pay ₹" + activePayable + " via UPI & enter 12-digit UTR.", "");
         body.innerHTML = `
           <div class="qr-box">
-            <div style="font-size:0.72rem;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:#462517;margin-bottom:8px">✦ Instant Multi-App UPI QR ✦</div>
+            <div style="font-size:0.72rem;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:#163a8a;margin-bottom:8px">✦ Instant Multi-App UPI QR ✦</div>
             <div class="qr-ring">
               <img src="${styledQrUrl}" alt="UPI QR ${UPI_ID}" />
             </div>
@@ -1733,7 +1717,7 @@ Main Bidholi Road, Near UPES Campus Gate, Dehradun`;
               refId,
               statusLabel
             });
-            localStorage.setItem("mc_booking_logs", JSON.stringify(bookingLogs));
+            localStorage.setItem("mc_rb_booking_logs", JSON.stringify(bookingLogs));
             renderBookingHistory();
 
             paymentLogs.unshift({
@@ -1750,14 +1734,14 @@ Main Bidholi Road, Near UPES Campus Gate, Dehradun`;
               statusLabel,
               kitchenStatus: "Reserved"
             });
-            localStorage.setItem("mc_payment_logs", JSON.stringify(paymentLogs));
+            localStorage.setItem("mc_rb_payment_logs", JSON.stringify(paymentLogs));
 
             ownerMessages.unshift({
               timeStr,
               title: `🪑 Auto-Verified Booking: ${bookingId} (₹${pendingBooking.total})`,
               body: `Guest <b>${pendingBooking.name}</b> (Gmail: <b>${pendingBooking.email}</b> | ${pendingBooking.phone}) booked <b>${pendingBooking.slot}</b> on <b>${pendingBooking.date}</b>. Ref: <b>${refId}</b>.`
             });
-            localStorage.setItem("mc_owner_msgs", JSON.stringify(ownerMessages));
+            localStorage.setItem("mc_rb_owner_msgs", JSON.stringify(ownerMessages));
             if (isOwnerLoggedIn) renderOwnerDashboard();
 
             document.getElementById("recHeading").textContent = "✅ Table Reservation Auto-Verified";
@@ -1800,14 +1784,14 @@ Main Bidholi Road, Near UPES Campus Gate, Dehradun`;
             statusLabel,
             kitchenStatus: "Preparing"
           });
-          localStorage.setItem("mc_payment_logs", JSON.stringify(paymentLogs));
+          localStorage.setItem("mc_rb_payment_logs", JSON.stringify(paymentLogs));
 
           ownerMessages.unshift({
             timeStr,
             title: `🔔 Auto-Verified Order: ${orderId} — ₹${finalTotal}`,
             body: `Customer <b>${custName}</b> (Gmail: <b>${custEmail}</b> | ${custPhone}) ordered: <b>${itemsSummary}</b>. Payment: <b>${refId}</b> (${statusLabel}).`
           });
-          localStorage.setItem("mc_owner_msgs", JSON.stringify(ownerMessages));
+          localStorage.setItem("mc_rb_owner_msgs", JSON.stringify(ownerMessages));
           if (isOwnerLoggedIn) renderOwnerDashboard();
 
           const itemsLines = cart.map(c => {
